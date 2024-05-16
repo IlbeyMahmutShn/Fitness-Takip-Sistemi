@@ -441,14 +441,14 @@ a {
 
 .about .row .content ul {
   font-size: 1.6rem;
-  color: yellow;
+  color: rgb(255, 255, 255);
   padding: 0.6rem 0;
   line-height: 1.8;
   margin-left: 15px;
 }
 
 .about .row .content li {
-  color: yellow;
+  color: rgb(255, 255, 255);
   padding: 0.6rem 0;
   line-height: 1.8;
   margin-left: 15px;
