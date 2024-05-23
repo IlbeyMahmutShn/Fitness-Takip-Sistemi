@@ -6,7 +6,7 @@ calculateBMIButton.addEventListener("click", function () {
   const weight = parseFloat(document.getElementById("weight").value);
 
   if (isNaN(height) || isNaN(weight)) {
-    bmiResultDiv.innerHTML = "<p>Lütfen geçerli boy ve kilo değerleri girin.</p>";
+    bmiResultDiv.innerHTML = `<p id = "sonuc">Lütfen geçerli boy ve kilo değerleri girin.</p>`;
     return;
   }
 

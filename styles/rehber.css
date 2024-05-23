@@ -1,64 +1,64 @@
 /* rehber başlangıç */
-
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap");
 .guide {
-    background-color: var(--main-color);
-    padding: 3.5rem 7%;
-  }
-  
-  .guide h2 {
-    font-size: 4rem;
-    color: var(--black-color);
-    margin-bottom: 3rem;
-    text-align: center;
-  }
-  
-  .guide div {
-    margin-bottom: 3rem;
-  }
-  
-  .guide label {
-    font-size: 3rem;
-    color: var(--black-color);
-    margin-left: 50.4rem;
-  }
-  
-  .guide input {
-    font-size: 1.6rem;
-    color: var(--black-color);
-    padding: 1rem;
-    border-radius: 3rem;
-    border: var(--border);
-    width: 100%;
-    max-width: 30rem;
-    font-size: 2.5rem;
-  }
-  
-  .guide button {
-    margin-top: 2rem;
-    display: block;
-    margin-left: 40rem;
-    width: 50%;
-    padding: 1.5rem;
-    font-size: 2rem;
-    color: white;
-    background-color: var(--black-color);
-    border-radius: 3rem;
-    border: var(--border);
-    cursor: pointer;
-  }
-  
-  #sonuc {
-    margin-left: 49.5rem;
-  }
-  
-  .guide button:hover {
-    opacity: 0.7;
-  }
-  
-  #bmi-result {
-    margin-top: 2rem;
-    font-size: 2rem;
-    color: var(--black-color);
-  }
-  
-  /* rehber bitiş */  
+  background-color: var(--main-color);
+  padding: 3.5rem 7%;
+}
+
+.guide h2 {
+  font-size: 4rem;
+  color: var(--black-color);
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.guide div {
+  margin-bottom: 3rem;
+}
+
+.guide label {
+  font-size: 3rem;
+  color: var(--black-color);
+  margin-left: 50.4rem;
+}
+
+.guide input {
+  font-size: 1.6rem;
+  color: var(--black-color);
+  padding: 1rem;
+  border-radius: 3rem;
+  border: var(--border);
+  width: 100%;
+  max-width: 30rem;
+  font-size: 2.5rem;
+}
+
+.guide button {
+  margin-top: 2rem;
+  display: block;
+  margin-left: 40rem;
+  width: 50%;
+  padding: 1.5rem;
+  font-size: 2rem;
+  color: white;
+  background-color: var(--black-color);
+  border-radius: 3rem;
+  border: var(--border);
+  cursor: pointer;
+}
+
+#sonuc {
+  margin-left: 49.5rem;
+}
+
+.guide button:hover {
+  opacity: 0.7;
+}
+
+#bmi-result {
+  margin-top: 2rem;
+  font-size: 2rem;
+  color: var(--black-color);
+}
+
+/* rehber bitiş */

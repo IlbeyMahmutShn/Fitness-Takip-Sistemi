@@ -10,6 +10,7 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <title>Carpediem Fit</title>
   <link rel="stylesheet" href="/styles/style.css" />
+  <link rel="stylesheet" href="/styles/Giris.css" />
   <link rel="shortcut icon" type="png" href="/images/Logo.png" />
 </head>
 
@@ -21,9 +22,9 @@
       <img src="/images/Logo.png" alt="logoya ulaşılamıyor!" />
     </a>
     <nav class="navbar">
-      <a href="/index.html">Ana Sayfa</a>
+      <a href="/index.html" class="active">Ana Sayfa</a>
       <a href="/pages/Ürünler.html">Ürünler</a>
-      <a href="/pages/Üyelikler.html" class="active">Üyelikler</a>
+      <a href="/pages/Üyelikler.html">Üyelikler</a>
       <a href="/pages/Antrenmanlar.html">Antrenmanlar</a>
       <a href="/pages/Rehber.html">Rehber</a>
       <a href="/pages/Hakkında.html">Hakkımızda</a>
@@ -53,59 +54,27 @@
 
   <!-- header bölümü bitiş -->
 
-  <!-- üyelik bölümü başlangıç -->
 
-  <section class="menu" id="menu">
-    <h1 class="H1">ÜYELİKLERİMİZ</h1>
-    <div class="box-container">
-      <div class="box">
-        <div class="box-head">
-          <img src="/images/Gümüş.png" alt="menü resmine ılaşılamıyor!" />
-          <span class="menu-category">Gümüş</span>
-          <h3>Başlangıç Üyelik</h3>
-          <div class="prices">99.99TL <span>150TL</span></div>
-        </div>
-        <div class="box-buttom">
-          <a href="#" class="btn">Satın Al</a>
-        </div>
-      </div>
-      <div class="box">
-        <div class="box-head">
-          <img src="/images/Altın.png" alt="menü resmine ılaşılamıyor!" />
-          <span class="menu-category">Altın</span>
-          <h3>Amatör Üyelik</h3>
-          <div class="prices">149.99TL <span>250TL</span></div>
-        </div>
-        <div class="box-buttom">
-          <a href="#" class="btn">Satın Al</a>
-        </div>
-      </div>
-      <div class="box">
-        <div class="box-head">
-          <img src="/images/Platinum.png" alt="menü resmine ılaşılamıyor!" />
-          <span class="menu-category">Platinum</span>
-          <h3>Gelişmiş Üyelik</h3>
-          <div class="prices">299.99TL <span>400TL</span></div>
-        </div>
-        <div class="box-buttom">
-          <a href="#" class="btn">Satın Al</a>
-        </div>
-      </div>
-      <div class="box">
-        <div class="box-head">
-          <img src="/images/Elmas.png" alt="menü resmine ılaşılamıyor!" />
-          <span class="menu-category">Elmas</span>
-          <h3>İleri Düzey Üyelik</h3>
-          <div class="prices">500TL <span>799.99TL</span></div>
-        </div>
-        <div class="box-buttom">
-          <a href="#" class="btn">Satın Al</a>
-        </div>
+  <section class="login-section">
+    <div class="container">
+      <div class="login-container">
+        <h1 class="H1">Giriş Yap</h1>
+        <form action="#" method="POST" class="login-form">
+          <div class="input-box">
+            <i class="fas fa-user"></i>
+            <input type="text" name="username" placeholder="Kullanıcı Adı" required>
+          </div>
+          <div class="input-box">
+            <i class="fas fa-lock"></i>
+            <input type="password" name="password" placeholder="Şifre" required>
+          </div>
+          <button type="submit" class="btn">Giriş Yap</button>
+        </form>
+        <p>Hesabınız yok mu? <a href="/pages/Kayıt.html">Üye Ol</a></p>
       </div>
     </div>
   </section>
 
-  <!-- üyelik bölümü bitiş -->
 
   <!-- alt bilgi bölümü başlangıç -->
 

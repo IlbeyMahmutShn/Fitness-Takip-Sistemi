@@ -229,7 +229,7 @@ a {
 .home {
   min-height: 100vh;
   background: url(/images/home.jpg);
-  image-resolution: 1920 , 1080;
+  image-resolution: 1920, 1080;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -257,7 +257,7 @@ a {
 
 /* ev bitiş */
 
-/* menü başlangıç */
+/* üyeliklerimiz başlangıç */
 
 .menu .box-container {
   display: grid;
@@ -306,7 +306,7 @@ a {
   font-weight: 350;
 }
 
-/* menü bitiş */
+/* üyeliklerimiz bitiş */
 
 /* ürünler başlangıç */
 
@@ -708,11 +708,12 @@ a {
   }
 
 }
+
 @media (max-width: 576px) {
   .contact .row .map {
-  border-bottom-left-radius: 0rem;
-  border-top-right-radius: 2.5rem;
-  border-bottom-right-radius: 0rem;
+    border-bottom-left-radius: 0rem;
+    border-top-right-radius: 2.5rem;
+    border-bottom-right-radius: 0rem;
   }
 }
 
