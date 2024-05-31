@@ -16,7 +16,6 @@
 
 <body>
     <!-- header bölümü başlangıc -->
-
     <header class="header">
         <a href="/index.html" class="logo">
             <img src="/images/Logo.png" alt="logoya ulaşılamıyor!" />
@@ -30,7 +29,6 @@
             <a href="/pages/Hakkında.html">Hakkımızda</a>
             <a href="/pages/İletişim.html">İletişim</a>
         </nav>
-
         <div class="buttons">
             <button id="search-btn">
                 <i class="fas fa-search"></i>
@@ -42,7 +40,6 @@
                 <i class="fas fa-bars"></i>
             </button>
         </div>
-
         <div class="search-form">
             <input style="background-color: yellow" type="text" class="search-input" id="search-box"
                 placeholder="Search here" />
@@ -51,36 +48,35 @@
         <div class="cart-items-container">
         </div>
     </header>
-
     <!-- header bölümü bitiş -->
 
     <section class="register-section">
         <div class="register-container">
             <h1 class="H1">Üye Ol</h1>
-            <form action="#" method="POST" class="register-form">
+            <form id="register-form" class="register-form" onsubmit="signup(event)">
                 <div class="input-box">
                     <i class="fas fa-user"></i>
-                    <input type="text" name="username" placeholder="Kullanıcı Adı" required>
+                    <input type="text" name="username" id="username" placeholder="Kullanıcı Adı" required>
                 </div>
                 <div class="input-box">
                     <i class="fas fa-envelope"></i>
-                    <input type="email" name="email" placeholder="E-posta" required>
+                    <input type="email" name="email" id="email" placeholder="E-posta" required>
                 </div>
                 <div class="input-box">
                     <i class="fas fa-lock"></i>
-                    <input type="password" name="password" placeholder="Şifre" required>
+                    <input type="password" name="password" id="password" placeholder="Şifre" required>
                 </div>
                 <div class="input-box">
                     <i class="fas fa-lock"></i>
-                    <input type="password" name="confirm_password" placeholder="Şifreyi Onayla" required>
+                    <input type="password" name="confirm_password" id="confirm_password" placeholder="Şifreyi Onayla"
+                        required>
                 </div>
-                <button type="submit" class="btn">Üye Ol</button>
+                <button type="submit" id="submit" class="btn">Üye Ol</button>
             </form>
         </div>
     </section>
 
     <!-- alt bilgi bölümü başlangıç -->
-
     <section class="footer">
         <div class="search">
             <input type="text" class="search-input" placeholder="Ara" />
@@ -106,10 +102,56 @@
             <span style="color: yellow">Tüm haklar saklıdır.</span>
         </div>
     </section>
-
     <!-- alt bilgi bölümü bitiş -->
 
     <script src="/js/script.js"></script>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+        import { getDatabase, ref, set, get } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyArIfSs-53cK4GdXL_qPd3PA_q0t-CcFn0",
+            authDomain: "carpediemfit-7afeb.firebaseapp.com",
+            projectId: "carpediemfit-7afeb",
+            storageBucket: "carpediemfit-7afeb.appspot.com",
+            messagingSenderId: "120827105260",
+            appId: "1:120827105260:web:e2fd99d2c33d7b2337bac9",
+            measurementId: "G-J18WC47TZZ"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const db = getDatabase(app);
+
+        document.getElementById("register-form").addEventListener('submit', function (e) {
+            e.preventDefault(); // Formun otomatik olarak gönderilmesini engelle
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+
+            // Kullanıcının kaydedileceği referansı oluştur
+            const userRef = ref(db, 'users/' + username);
+
+            // Belirtilen kullanıcı adı zaten mevcutsa, kullanıcıya uyarı ver
+            get(userRef).then((snapshot) => {
+                if (snapshot.exists()) {
+                    alert("Bu kullanıcı adı zaten mevcut, lütfen farklı bir kullanıcı adı seçin.");
+                } else {
+                    set(userRef, {
+                        username: username,
+                        password: password
+                    }).then(() => {
+                        console.log("Kayıt başarılı !");
+                        alert("Kayıt başarılı !");
+                    }).catch((error) => {
+                        console.error("Kayıt hatası:", error);
+                    });
+                }
+            }).catch((error) => {
+                console.error("Veri alınamadı:", error);
+            });
+        });
+    </script>
 </body>
 
 </html>
