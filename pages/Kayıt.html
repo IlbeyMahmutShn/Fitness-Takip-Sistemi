@@ -35,6 +35,7 @@
             </button>
             <button id="shopping-btn">
                 <i class="fas fa-shopping-cart"></i>
+                <div class="cart-total">0.00 TL</div>
             </button>
             <button id="menu-btn">
                 <i class="fas fa-bars"></i>
@@ -125,14 +126,13 @@
         const db = getDatabase(app);
 
         document.getElementById("register-form").addEventListener('submit', function (e) {
-            e.preventDefault(); // Formun otomatik olarak gönderilmesini engelle
+            e.preventDefault();
             const username = document.getElementById("username").value;
             const password = document.getElementById("password").value;
 
             // Kullanıcının kaydedileceği referansı oluştur
             const userRef = ref(db, 'users/' + username);
 
-            // Belirtilen kullanıcı adı zaten mevcutsa, kullanıcıya uyarı ver
             get(userRef).then((snapshot) => {
                 if (snapshot.exists()) {
                     alert("Bu kullanıcı adı zaten mevcut, lütfen farklı bir kullanıcı adı seçin.");
